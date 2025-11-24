@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Beyond One Orgasm – Real Talk, Simple Help</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A simple, honest guide to help you enjoy sex more – without shame, drama or expensive therapy. Only $8.99." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-dark: #050910;
+      --bg-section: #071520;
+      --accent: #f4d58a;
+      --text-main: #faf4e6;
+      --text-muted: #c7cfda;
+      --cta: #f4c15f;
+      --cta-dark: #b8861b;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.7);
+      --max-width: 1100px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #103645 0, #050910 55%, #000000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 18px 14px 56px;
+    }
+
+    /* Sticky CTA bar */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(90deg, rgba(5, 9, 16, 0.95), rgba(5, 9, 16, 0.9));
+      border-bottom: 1px solid rgba(244, 213, 138, 0.2);
+      padding: 9px 14px;
+    }
+
+    .top-bar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .top-title {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .top-price {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .btn,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.18s ease-out;
+      white-space: nowrap;
+    }
+
+    .btn {
+      padding: 11px 26px;
+      background: var(--cta);
+      color: #1d1304;
+      box-shadow: 0 14px 35px rgba(244, 193, 95, 0.35);
+      font-size: 0.95rem;
+    }
+
+    .btn:hover {
+      background: var(--cta-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn-secondary {
+      padding: 10px 22px;
+      font-size: 0.9rem;
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid rgba(244, 213, 138, 0.55);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(244, 213, 138, 0.08);
+    }
+
+    section {
+      margin-top: 34px;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, rgba(244, 213, 138, 0.08), rgba(3, 9, 16, 0.98));
+      padding: 22px 18px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(244, 213, 138, 0.16);
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 22px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(244, 213, 138, 0.4);
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .hero-tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: 2.05rem;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .hero-sub {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-bullets {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    .hero-bullets li {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .hero-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .hero-note {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+    }
+
+    .hero-note span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-media {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: radial-gradient(circle at top, #174653, #050910);
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(5, 9, 16, 0.9);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border: 1px solid rgba(244, 213, 138, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-badge span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Headings and text */
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .pain-list {
+      list-style: none;
+      margin-top: 14px;
+    }
+
+    .pain-list li {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      margin-bottom: 7px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .pain-list li::before {
+      content: "✧";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    .big-highlight {
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .promise-list {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .promise-list li {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .promise-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+
+    /* Two-column section (for tablet+coffee) */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 22px;
+      align-items: center;
+    }
+
+    .inside-note {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-top: 10px;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .testimonial-card {
+      border-radius: var(--radius-md);
+      background: radial-gradient(circle at top left, rgba(244, 213, 138, 0.09), #040a11);
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(244, 213, 138, 0.2);
+    }
+
+    .testimonial-tagline {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .testimonial-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .testimonial-name {
+      font-size: 0.83rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .stars {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin-top: 2px;
+    }
+
+    /* Pricing */
+    .pricing {
+      text-align: left;
+    }
+
+    .price-big {
+      font-size: 2rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 6px 0 2px;
+    }
+
+    .price-sub {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .price-hook {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .format-list {
+      list-style: none;
+      margin-bottom: 12px;
+    }
+
+    .format-list li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 5px;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .format-list li::before {
+      content: "↳";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-top: 1px;
+    }
+
+    .pricing-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 6px;
+      margin-top: 4px;
+    }
+
+    .small-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .faq-item {
+      background: rgba(5, 9, 16, 0.95);
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      border: 1px solid rgba(244, 213, 138, 0.18);
+    }
+
+    .faq-q {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .faq-a {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      margin-top: 26px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(244, 213, 138, 0.25);
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 20px 16px;
+      }
+
+      .hero-title {
+        font-size: 1.7rem;
+      }
+
+      .section-title {
+        font-size: 1.35rem;
+      }
+
+      .top-bar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .top-title {
+        font-size: 0.82rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        padding-inline: 10px;
+      }
+
+      .hero-title {
+        font-size: 1.55rem;
+      }
+
+      .btn,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .pricing-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky CTA -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-title">
+        <span class="top-price">$8.99</span> – simple, honest help for your sex life. No drama, no explicit content.
+      </div>
+      <a href="https://aseel93.gumroad.com/l/cecvu" target="_blank" rel="noopener" class="btn">
+        Get Instant Access for $8.99
+      </a>
+    </div>
+  </div>
+
+  <main class="page">
+
+    <!-- HERO (popular) -->
+    <section class="hero" id="top">
+      <div>
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          Real talk • No shame • No porn
+        </div>
+
+        <h1 class="hero-title">
+          Want better sex without awkward talks or expensive therapy?
+        </h1>
+
+        <p class="hero-sub">
+          <em>Beyond One Orgasm</em> is a straight-to-the-point guide that helps you actually enjoy sex and your own pleasure –
+          in simple language, with zero graphic scenes.
+        </p>
+
+        <ul class="hero-bullets">
+          <li>Always “go along” but rarely get much pleasure yourself.</li>
+          <li>Your desire dropped after marriage and you think something is wrong with you.</li>
+          <li>You want more orgasms and more connection – but don’t know where to even start.</li>
+        </ul>
+
+        <div class="hero-ctas">
+          <a href="https://aseel93.gumroad.com/l/cecvu" target="_blank" rel="noopener" class="btn">
+            Buy Now – Instant Download ($8.99)
+          </a>
+          <a href="#promise" class="btn-secondary">
+            See what it can change →
+          </a>
+        </div>
+
+        <p class="hero-note">
+          One-time payment. <span>Instant access</span> – read it tonight from your phone or tablet.
+        </p>
+      </div>
+
+      <div class="hero-media">
+        <img src="hero-mockup-beyond-one-orgasm.jpg"
+             alt="Beyond One Orgasm book and tablet mockup on a table" />
+        <div class="hero-badge">
+          ⭐⭐⭐⭐⭐ <span>“Worth more than the price.”</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMISE / HOOK SECTION -->
+    <section id="promise">
+      <div class="big-highlight">This guide is for you if you’re tired of:</div>
+      <ul class="pain-list">
+        <li>Feeling like sex is a duty, not something you look forward to.</li>
+        <li>Faking orgasms so the night can “just end”.</li>
+        <li>Feeling guilty or “broken” because your desire is low.</li>
+        <li>Seeing tips online that feel unrealistic or like they’re written for porn, not real life.</li>
+      </ul>
+
+      <p class="muted" style="margin-top:10px;">
+        You don’t need to be “perfect”. You just need simple, gentle guidance that explains your body, your stress,
+        and your desire – in words you actually understand.
+      </p>
+
+      <div style="margin-top:16px;">
+        <a href="#pricing" class="btn">I want something that finally makes sense →</a>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET + COFFEE MOCKUP -->
+    <section id="inside" class="two-col">
+      <div>
+        <h2 class="section-title">What you’ll really get from this $8.99 guide</h2>
+        <p class="muted">
+          No magic tricks. Just clear, realistic tools you can actually use in your busy life.
+        </p>
+
+        <ul class="promise-list" style="margin-top:10px;">
+          <li>Understand why your desire changed (it’s not because you’re “broken”).</li>
+          <li>Learn how stress, kids, house work and mental load shut down your body’s pleasure.</li>
+          <li>Simple body exercises to feel safer, more relaxed and more ready for pleasure.</li>
+          <li>Easy phrases to talk to your partner without fights or drama.</li>
+          <li>A gentle 21-day plan to slowly bring back desire and real connection.</li>
+        </ul>
+
+        <p class="inside-note">
+          Read a few pages with your evening coffee, try one small step, repeat. No pressure, no rush.
+        </p>
+      </div>
+
+      <div class="hero-media">
+        <img src="tablet-coffee-beyond-one-orgasm.jpg"
+             alt="Tablet with Beyond One Orgasm and a warm cup of coffee" />
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS (popular tone) -->
+    <section id="testimonials">
+      <h2 class="section-title">What readers say after finishing the book</h2>
+      <p class="muted">These are the kind of messages people send – in their own words:</p>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-tagline">“I finally understand my body.”</div>
+          <p class="testimonial-body">
+            “I’ve been married for 8 years and always thought I was the problem. This book explained desire in a
+            calm, simple way. Once I tried the exercises, I started having deeper, more frequent orgasms without
+            faking or performing.”
+          </p>
+          <div class="testimonial-name">— Sarah, 34, married</div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-tagline">“More than one orgasm… without the drama.”</div>
+          <p class="testimonial-body">
+            “I used to rush through sex just to ‘get it over with’. The step-by-step guidance in this book helped
+            me slow down, breathe, and actually enjoy my body. Now I regularly have more than one orgasm in one
+            session and I’m not ashamed to say it.”
+          </p>
+          <div class="testimonial-name">— M., 29, married 4 years</div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-tagline">“Turns out I’m not broken, just exhausted.”</div>
+          <p class="testimonial-body">
+            “I always felt guilty for having low desire. The chapter on the nervous system and stress hit me hard.
+            After changing our routine and sharing the mental load, my desire came back—and so did my orgasms.”
+          </p>
+          <div class="testimonial-name">— L., 37, mom of three</div>
+          <div class="stars">★★★★★</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-tagline">“Our marriage bed did a 180.”</div>
+          <p class="testimonial-body">
+            “We were close to giving up. So much resentment, zero spark. Reading this book together helped us
+            understand why safety and kindness matter more than ‘techniques’. Our sex life is less frequent, but a
+            thousand times more satisfying now.”
+          </p>
+          <div class="testimonial-name">— H &amp; M, married 10 years</div>
+          <div class="stars">★★★★★</div>
+        </article>
+      </div>
+
+      <div style="margin-top:16px;">
+        <a href="#pricing" class="btn">I want results like this →</a>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing">
+      <h2 class="section-title">Grab your copy and start changing your nights</h2>
+
+      <div class="price-big">$8.99</div>
+      <div class="price-sub">
+        One-time payment. No subscription. No hidden fees.
+      </div>
+
+      <p class="price-hook">
+        ✔ Less than the price of one takeaway coffee.<br />
+        ✔ Less than one session with a therapist.<br />
+        ✔ Yours forever – you can reread it anytime.
+      </p>
+
+      <ul class="format-list">
+        <li>Instant digital download after purchase.</li>
+        <li>PDF + e-reader friendly format.</li>
+        <li>Read on your phone, tablet or laptop.</li>
+      </ul>
+
+      <div class="pricing-ctas">
+        <a href="https://aseel93.gumroad.com/l/cecvu" target="_blank" rel="noopener" class="btn">
+          Buy on Gumroad – Instant Download
+        </a>
+        <a href="https://www.amazon.com/dp/B0G2TGV7X3" target="_blank" rel="noopener" class="btn-secondary">
+          View on Amazon →
+        </a>
+      </div>
+
+      <p class="small-note">
+        Your download link will be sent straight to your email within minutes after purchase.
+      </p>
+    </section>
+
+    <!-- FAQ (very short) -->
+    <section id="faq">
+      <h2 class="section-title">Quick questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Is this book explicit or pornographic?</div>
+          <div class="faq-a">
+            No. It’s adult sex education. The language is clear and direct, but there are no graphic images or porn-style scenes.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Do I need to read it with my partner?</div>
+          <div class="faq-a">
+            You can read it alone first and share only what you want. There are simple phrases and ideas you can
+            bring into conversations later, at your own pace.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Is it too late for me? I’ve been married for a long time.</div>
+          <div class="faq-a">
+            Absolutely not. Many readers have kids, busy lives and long marriages. Desire can change at any age
+            when you understand your body and reduce stress.
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;">
+        <a href="https://aseel93.gumroad.com/l/cecvu" target="_blank" rel="noopener" class="btn">
+          I’m ready for calmer, better sex – $8.99 →
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Kind Desire. Educational content only – not a substitute for medical or psychological care.
+    </footer>
+
+  </main>
+</body>
+</html>
